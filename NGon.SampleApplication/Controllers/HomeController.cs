@@ -11,7 +11,7 @@ namespace NGon.SampleApplication.Controllers
         public ActionResult Index()
         {
             var person = new Person { FirstName = "John", LastName = "Doe", Age = 30 };
-            ViewBag.NGon.Person = person;
+            ViewBag.NGon.Person = person;            
             return View();
         }
     }
