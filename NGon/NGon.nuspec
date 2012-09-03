@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<package >
+  <metadata>
+    <id>$id$</id>
+    <version>$version$</version>
+    <title>$title$</title>
+    <authors>$author$</authors>
+    <owners>$author$</owners>    
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>ASP.NET MVC variables in JS (port of Rails Gon)</description>
+    <releaseNotes>Initial package creation</releaseNotes>
+    <copyright>Copyright 2012</copyright>
+    <tags>NGON Javascript</tags>
+  </metadata>
+</package>
