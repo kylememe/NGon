@@ -77,6 +77,24 @@ namespace NGon.Tests
         }
 
         [Test]
+        public void PocoObjectWithCollectionJsonTest()
+        {
+            var person = new { FirstName = "John", LastName = "Doe", Age = 45, Numbers = new System.Collections.Generic.List<int> { 1, 6, 2, 4 } };
+
+            //arrange
+            _controller.ViewBag.NGon.Person = person;
+
+            //act
+            var result = _helper.IncludeNGon();
+
+            //assert
+            var expected = String.Concat(String.Format(StartScriptTagFormat, "ngon"), @"ngon.Person={""FirstName"":""John"",""LastName"":""Doe"",""Age"":45,""Numbers"":[1,6,2,4]};", EndScriptTag);
+            var actual = result.ToString();
+            Assert.AreEqual(expected, actual);
+           
+        }
+
+        [Test]
         public void NamespaceTest()
         {
             const string @namespace = "test";
